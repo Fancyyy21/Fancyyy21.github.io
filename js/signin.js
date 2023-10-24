@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const password = document.getElementById("password").value;
 
         // Kirim permintaan POST ke API
-        fetch("https://asia-southeast2-annular-hexagon-401501.cloudfunctions.net/signin", {
+        fetch("https://asia-southeast2-annular-hexagon-401501.cloudfunctions.net/signin-1fancy", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
