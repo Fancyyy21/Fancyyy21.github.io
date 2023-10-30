@@ -62,6 +62,33 @@ paths:
           - write: apiKey
           - read: apiKey
 
+  /LineString:
+    post:
+      tags:
+        - user
+      summary: LineString get Token
+      description: LineString and Get Return
+      operationId: authService
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Auth'
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthResponse'
+        '405':
+          description: Invalid input
+      security:
+        - token:
+          - write: apiKey
+          - read: apiKey
+
+
   /Gis:
     get:
       tags:
