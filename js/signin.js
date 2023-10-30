@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 console.log(token);
 
                 // Redirect ke halaman dashboard setelah login berhasil
-                window.location.href = "../theme/loginberhasil.html";
+                // window.location.href = "../theme/loginberhasil.html";
             } else {
                 // Pengolahan respons jika login gagal
                 message.textContent = "Login failed. Please check your username and password.";

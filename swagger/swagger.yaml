@@ -105,10 +105,10 @@ components:
       properties:
         username:
           type: string
-          example: petped
+          example: admin
         password:
           type: string
-          example: secret
+          example: admin
     AuthResponse:
       type: object
       properties:
