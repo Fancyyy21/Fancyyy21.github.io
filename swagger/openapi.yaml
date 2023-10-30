@@ -17,6 +17,8 @@ externalDocs:
   url: https://pkg.go.dev/github.com/Fancyyy21/BackendGIS
 servers:
   - url: https://asia-southeast2-annular-hexagon-401501.cloudfunctions.net/postlinestring
+  - url: https://asia-southeast2-annular-hexagon-401501.cloudfunctions.net/signup-1fancy
+  - url: https://asia-southeast2-annular-hexagon-401501.cloudfunctions.net/signin-1fancy
 tags:
   - name: Create GIS
     description: Data Geo Spasial
@@ -118,10 +120,10 @@ components:
       properties:
         username:
           type: string
-          example: raull
+          example: maul
         password:
           type: string
-          example: ganteng
+          example: maul
     AuthResponse:
       type: object
       properties:
@@ -130,10 +132,10 @@ components:
           example: false
         message:
           type: string
-          example: fehguy
+          example: fancy
         token:
           type: string
-          example: fehguy
+          example: fancy
   requestBodies:
     AuthReq:
       description: Request Authentication
