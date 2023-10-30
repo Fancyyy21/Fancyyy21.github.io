@@ -16,6 +16,7 @@ externalDocs:
 servers:
   - url: https://asia-southeast2-annular-hexagon-401501.cloudfunctions.net/signin-1fancy
   - url: https://asia-southeast2-annular-hexagon-401501.cloudfunctions.net/signup-1fancy
+  - url: https://asia-southeast2-annular-hexagon-401501.cloudfunctions.net/postlinesting
 paths:
   /getallUser:
     get:
@@ -65,10 +66,10 @@ paths:
   /LineString:
     post:
       tags:
-        - user
+        - GIS
       summary: LineString get Token
       description: LineString and Get Return
-      operationId: authService
+      operationId: postLineString
       requestBody:
         content:
           application/json:
@@ -141,13 +142,14 @@ components:
       properties:
         status:
           type: bool
-          example: false
+          example: true
         message:
           type: string
-          example: maul
+          example: Selamat Datang
         token:
           type: string
-          example: maul
+          example: v4.public.eyJleHAiOiIyMDIzLTEwLTMwVDA0OjE2OjI2WiIsImlhdCI6IjIwMjMtMTAtMzBUMDI6MTY6MjZaIiwiaWQiOiJhZG1pbiIsIm5iZiI6IjIwMjMtMTAtMzBUMDI6MTY6MjZaIn1QGpxEsXCNl5y17pSWSfvSXaME5gUPvxHTLsHlp4Ug-_vWPXtdDF2VxVTiEOuoycuIAt0p-rv8-TvAGNoz_WYM
+
     Login:
       type: object
       properties:
@@ -160,6 +162,7 @@ components:
         Role:
           type: string
           example: admin || user
+
     Delete:
       type: object
       properties:
