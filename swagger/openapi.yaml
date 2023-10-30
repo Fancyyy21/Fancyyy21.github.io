@@ -16,7 +16,7 @@ externalDocs:
   description: Repo GCF
   url: https://pkg.go.dev/github.com/Fancyyy21/BackendGIS
 servers:
-  - url: https://asia-southeast2-annular-hexagon-401501.cloudfunctions.net/postlinesting
+  - url: https://asia-southeast2-annular-hexagon-401501.cloudfunctions.net/postlinestring
 tags:
   - name: Create GIS
     description: Data Geo Spasial
