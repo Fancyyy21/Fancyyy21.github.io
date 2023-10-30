@@ -2,7 +2,7 @@ openapi: 3.1.0
 info:
   title: Dokumentasi Api Fancyyy21 Maulana
   description: >-
-    DISINI SEMUAH API MICROSERVICES YANG ADA DI Fancyyy21 Maulana
+    Disini ada semua api microservice dari (Fancyyy21) Maulana
   termsOfService: https://github.com/jscroot/examples/tree/main/api/swagger
   contact:
     email: imanulhaq5@gmail.com
@@ -117,16 +117,16 @@ components:
           example: false
         message:
           type: string
-          example: fehguy
+          example: maul
         token:
           type: string
-          example: fehguy
+          example: maul
     Login:
       type: object
       properties:
         username:
           type: string
-          example: petped
+          example: fancy
         password:
           type: string
           example: secret
