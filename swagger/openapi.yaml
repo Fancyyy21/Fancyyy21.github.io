@@ -165,19 +165,19 @@ components:
       properties:
         username:
           type: string
-          example: maul
+          example: cobainakun123
         password:
           type: string
-          example: maul
+          example: cobainakun123
     AuthResponse:
       type: object
       properties:
         status:
           type: bool
-          example: false
+          example: true
         message:
           type: string
-          example: cobainakun123
+          example: Selamat Datang
         token:
           type: string
           example: v4.public.eyJleHAiOiIyMDIzLTExLTEyVDAzOjQ3OjMwWiIsImlhdCI6IjIwMjMtMTEtMTJUMDE6NDc6MzBaIiwiaWQiOiJjb2JhaW5ha3VuMTIzIiwibmJmIjoiMjAyMy0xMS0xMlQwMTo0NzozMFoifT7OLfKvnS5_A4uxg8zPfJJ-jf_PGVx7ZDyWQbLaABFe3a8qW4XZ-t41zMkSPN9_nTk4pf-dtg40kmfMYcupLws
