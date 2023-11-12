@@ -5,34 +5,34 @@ info:
     Jelaskan disini apa saja yang perlu dijelaskan
     termasuk informasi yang diperlukan untuk dinilai
     term of service isi dari link repo dari swagger ini
-  termsOfService: https://github.com/UniStoreProject3/swagger
+  termsOfService: https://github.com/Fancyyy21/Fancyyy21.github.io
   contact:
     email: befousmain@gmail.com
   license:
     name: Peda Package
-    url: https://pkg.go.dev/github.com/UniStoreProject3/Backend
+    url: https://pkg.go.dev/github.com/Fancyyy21/BackendGIS
   version: 1.0.3
 externalDocs:
   description: Repo GCF
-  url: https://github.com/UniStoreProject3/gcf/
+  url: https://pkg.go.dev/github.com/Fancyyy21/BackendGIS
 servers:
-  - url: https://asia-southeast2-unistore-403306.cloudfunctions.net
+  - url: https://asia-southeast2-annular-hexagon-401501.cloudfunctions.net
 tags:
   - name: Registrasi
     description: Membuat akun user dengan password terenkripsi
     externalDocs:
       description: Deskripsi dan Kode Program
-      url: https://petapedia.github.io/gcf/get/ #yang ini blom diganti ====================================================================
+      url: https://pkg.go.dev/github.com/Fancyyy21/BackendGIS #yang ini blom diganti ====================================================================
   - name: Login
     description: Mendapatkan token menggunakan akun user yang telah dibuat
     externalDocs:
       description: Deskripsi dan Kode Program
-      url: https://petapedia.github.io/gcf/post/ #yang ini blom diganti ====================================================================
+      url: https://pkg.go.dev/github.com/Fancyyy21/BackendGIS #yang ini blom diganti ====================================================================
   - name: Delete
     description: Menghapus akun user yang telah dibuat
     externalDocs:
       description: Deskripsi dan Kode Program
-      url: https://petapedia.github.io/gcf/post/ #yang ini blom diganti ====================================================================
+      url: https://pkg.go.dev/github.com/Fancyyy21/BackendGIS #yang ini blom diganti ====================================================================
 paths:
   /MembuatUser:
     post:
@@ -110,10 +110,10 @@ components:
       properties:
         username:
           type: string
-          example: ibrohim
+          example: maulanaadmin123
         password:
           type: string
-          example: ibrohim
+          example: maulanaadmin123
         role:
           type: string
           example: user
@@ -122,16 +122,16 @@ components:
       properties:
         username:
           type: string
-          example: ibrohim
+          example: maulanaadmin123
         password:
           type: string
-          example: ibrohim
+          example: maulanaadmin123
     UsernameOnly:
       type: object
       properties:
         username:
           type: string
-          example: ibrohim
+          example: maulanaadmin123
   requestBodies:
     AuthReq:
       description: Request Authentication
