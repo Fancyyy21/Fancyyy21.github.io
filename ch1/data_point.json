@@ -59,9 +59,7 @@
     },
     {
       "type": "Feature",
-      "properties": {
-        "name": "warungmakan"
-      },
+      "properties": {},
       "geometry": {
         "coordinates": [
           108.22829911087337,
