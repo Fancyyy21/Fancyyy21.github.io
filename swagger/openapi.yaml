@@ -80,29 +80,6 @@ paths:
         - token:
             - write:apiKey
             - read:apiKey
-  /HapusUser:
-    delete:
-      tags:
-        - Delete
-      summary: Mendapatkan token untuk login
-      description: Masukkan username dan password yang telah didaftarkan
-      operationId: MembuatTokenUser
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/UsernameOnly'
-      responses:
-        '200':
-          description: successful operation
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/UsernameOnly'
-      security:
-        - token:
-            - write:apiKey
-            - read:apiKey
 components:
   schemas:
     User:
