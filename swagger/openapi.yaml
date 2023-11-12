@@ -1,184 +1,137 @@
 openapi: 3.0.3
 info:
-  title: DOKUMEN API GIS MAULANA IMANULHAQ - OpenAPI 3.0
+  title: Dokumen API Cloud Function - OpenAPI 3.0
   description: >-
     Jelaskan disini apa saja yang perlu dijelaskan
     termasuk informasi yang diperlukan untuk dinilai
     term of service isi dari link repo dari swagger ini
-  termsOfService: https://github.com/Fancyyy21/Fancyyy21.github.io
+  termsOfService: https://github.com/UniStoreProject3/swagger
   contact:
-    email: imanulhaq5@gmail.com
+    email: befousmain@gmail.com
   license:
-    name: Fancy Backend
-    url: https://pkg.go.dev/github.com/Fancyyy21/BackendGIS
-  version: 1.0.11
+    name: Peda Package
+    url: https://pkg.go.dev/github.com/UniStoreProject3/Backend
+  version: 1.0.3
 externalDocs:
   description: Repo GCF
-  url: https://pkg.go.dev/github.com/Fancyyy21/BackendGIS
+  url: https://github.com/UniStoreProject3/gcf/
 servers:
-  - url: https://asia-southeast2-annular-hexagon-401501.cloudfunctions.net
+  - url: https://asia-southeast2-unistore-403306.cloudfunctions.net
 tags:
-  - name: Create GIS
-    description: Data Geo Spasial
+  - name: Registrasi
+    description: Membuat akun user dengan password terenkripsi
     externalDocs:
       description: Deskripsi dan Kode Program
-      url: https://pkg.go.dev/github.com/Fancyyy21/BackendGIS
-  - name: auth
-    description: Auth to Access to API
+      url: https://petapedia.github.io/gcf/get/ #yang ini blom diganti ====================================================================
+  - name: Login
+    description: Mendapatkan token menggunakan akun user yang telah dibuat
     externalDocs:
       description: Deskripsi dan Kode Program
-      url: https://pkg.go.dev/github.com/Fancyyy21/BackendGIS
-  - name: user
-    description: Get Token and Authorize
+      url: https://petapedia.github.io/gcf/post/ #yang ini blom diganti ====================================================================
+  - name: Delete
+    description: Menghapus akun user yang telah dibuat
+    externalDocs:
+      description: Deskripsi dan Kode Program
+      url: https://petapedia.github.io/gcf/post/ #yang ini blom diganti ====================================================================
 paths:
-  /gislocation:
-    get:
-      tags:
-        - data
-      summary: Get Data Geospasial
-      description: List Data Geospasial
-      operationId: getGeoJSON
-      responses:
-        '200':
-          description: successful operation
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/Peta'
-        '400':
-          description: Invalid status value
-  /function-16:
+  /MembuatUser:
     post:
       tags:
-        - auth
-      summary: Login get Token
-      description: Login and Get User Token
-      operationId: authService
+        - Registrasi
+      summary: Registrasi User
+      description: Membuat akun user dengan password terenkripsi
+      operationId: MembuatUser
       requestBody:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Auth'
+              $ref: '#/components/schemas/User'
       responses:
         '200':
           description: successful operation
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/AuthResponse'
-        '405':
-          description: Invalid input
+                $ref: '#/components/schemas/User'
       security:
         - token:
             - write:apiKey
             - read:apiKey
-  /postgis:  # Penambahan endpoint Create GIS
+  /MembuatTokenUser:
     post:
       tags:
-        - Create GIS
-      summary: Create GIS Data
-      description: Add new GIS data
-      operationId: createGIS
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/Peta' # Gunakan skema yang sesuai di sini
-      responses:
-        '201':
-          description: Data successfully created
-        '400':
-          description: Invalid input or request body
-      security:
-        - token: []       
-  /signup-1fancy :
-    post:
-      tags:
-        - user
-      summary: create user
-      description: create user
-      operationId: createuser
+        - Login
+      summary: Mendapatkan token untuk login
+      description: Masukkan username dan password yang telah didaftarkan
+      operationId: MembuatTokenUser
       requestBody:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Auth'
+              $ref: '#/components/schemas/UsernameNPassword'
       responses:
         '200':
           description: successful operation
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/AuthResponse'
-        '405':
-          description: Invalid input
+                $ref: '#/components/schemas/UsernameNPassword'
       security:
         - token:
             - write:apiKey
             - read:apiKey
-  /signin-1fancy:  # Penambahan endpoint Create GIS
-    post:
+  /HapusUser:
+    delete:
       tags:
-        - user
-      summary: Login User Data
-      description: Login User Data
-      operationId: loginUser
+        - Delete
+      summary: Mendapatkan token untuk login
+      description: Masukkan username dan password yang telah didaftarkan
+      operationId: MembuatTokenUser
       requestBody:
-        required: true
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Auth' # Gunakan skema yang sesuai di sini
+              $ref: '#/components/schemas/UsernameOnly'
       responses:
-        '201':
-          description: Data successfully created
-        '400':
-          description: Invalid input or request body
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UsernameOnly'
       security:
-        - token: []       
+        - token:
+            - write:apiKey
+            - read:apiKey
 components:
   schemas:
-    Peta:
-      type: object
-      properties:
-        type:
-          type: string
-        geometry:
-          type: object
-          properties:
-            type: 
-              type: string
-            coordinates: 
-              type: array
-        properties:
-          type: object
-          properties:
-            name:
-              type: string
-    Auth:
+    User:
       type: object
       properties:
         username:
           type: string
-          example: cobainakun123
+          example: ibrohim
         password:
           type: string
-          example: cobainakun123
-    AuthResponse:
+          example: ibrohim
+        role:
+          type: string
+          example: user
+    UsernameNPassword:
       type: object
       properties:
-        status:
-          type: bool
-          example: true
-        message:
+        username:
           type: string
-          example: Selamat Datang
-        token:
+          example: ibrohim
+        password:
           type: string
-          example: v4.public.eyJleHAiOiIyMDIzLTExLTEyVDAzOjQ3OjMwWiIsImlhdCI6IjIwMjMtMTEtMTJUMDE6NDc6MzBaIiwiaWQiOiJjb2JhaW5ha3VuMTIzIiwibmJmIjoiMjAyMy0xMS0xMlQwMTo0NzozMFoifT7OLfKvnS5_A4uxg8zPfJJ-jf_PGVx7ZDyWQbLaABFe3a8qW4XZ-t41zMkSPN9_nTk4pf-dtg40kmfMYcupLws
+          example: ibrohim
+    UsernameOnly:
+      type: object
+      properties:
+        username:
+          type: string
+          example: ibrohim
   requestBodies:
     AuthReq:
       description: Request Authentication
