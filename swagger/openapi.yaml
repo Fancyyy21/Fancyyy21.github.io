@@ -95,7 +95,52 @@ paths:
         '400':
           description: Invalid input or request body
       security:
-        - token: []           
+        - token: []       
+  /createacount:
+    post:
+      tags:
+        - user
+      summary: create user
+      description: create user
+      operationId: createuser
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Auth'
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AuthResponse'
+        '405':
+          description: Invalid input
+      security:
+        - token:
+            - write:apiKey
+            - read:apiKey
+  /login:  # Penambahan endpoint Create GIS
+    post:
+      tags:
+        - user
+      summary: Login User Data
+      description: Login User Data
+      operationId: loginUser
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Auth' # Gunakan skema yang sesuai di sini
+      responses:
+        '201':
+          description: Data successfully created
+        '400':
+          description: Invalid input or request body
+      security:
+        - token: []       
 components:
   schemas:
     Peta:
