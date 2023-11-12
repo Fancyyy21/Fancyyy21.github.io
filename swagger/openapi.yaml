@@ -180,7 +180,7 @@ components:
           example: fancy
         token:
           type: string
-          example: fancy
+          example: v4.public.eyJleHAiOiIyMDIzLTExLTEyVDAzOjQ3OjMwWiIsImlhdCI6IjIwMjMtMTEtMTJUMDE6NDc6MzBaIiwiaWQiOiJjb2JhaW5ha3VuMTIzIiwibmJmIjoiMjAyMy0xMS0xMlQwMTo0NzozMFoifT7OLfKvnS5_A4uxg8zPfJJ-jf_PGVx7ZDyWQbLaABFe3a8qW4XZ-t41zMkSPN9_nTk4pf-dtg40kmfMYcupLws
   requestBodies:
     AuthReq:
       description: Request Authentication
