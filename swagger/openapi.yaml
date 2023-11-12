@@ -28,11 +28,6 @@ tags:
     externalDocs:
       description: Deskripsi dan Kode Program
       url: https://pkg.go.dev/github.com/Fancyyy21/BackendGIS #yang ini blom diganti ====================================================================
-  - name: Delete
-    description: Menghapus akun user yang telah dibuat
-    externalDocs:
-      description: Deskripsi dan Kode Program
-      url: https://pkg.go.dev/github.com/Fancyyy21/BackendGIS #yang ini blom diganti ====================================================================
 paths:
   /signup-1fancy:
     post:
