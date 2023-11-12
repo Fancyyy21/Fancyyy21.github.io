@@ -34,7 +34,7 @@ tags:
       description: Deskripsi dan Kode Program
       url: https://pkg.go.dev/github.com/Fancyyy21/BackendGIS #yang ini blom diganti ====================================================================
 paths:
-  /MembuatUser:
+  /signup-1fancy:
     post:
       tags:
         - Registrasi
@@ -57,7 +57,7 @@ paths:
         - token:
             - write:apiKey
             - read:apiKey
-  /MembuatTokenUser:
+  /signin-1fancy:
     post:
       tags:
         - Login
