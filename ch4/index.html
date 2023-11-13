@@ -36,11 +36,21 @@
             <div id="popup-content"></div>
             <div id="popup-input">
                 Nama : <input type="text" id="name" name="name" required><br>
-                Volume : <input type="text" id="volume" name="volume" required><br>
                 <input type="hidden" id="long" name="long" value="">
                 <input type="hidden" id="lat" name="lat" value="">
                 <button id="insertmarkerbutton" type="button">Input</button><br>
             </div>
+        </div>
+        
+        <div class="col-auto">
+            <span class="input-group">
+                <label class="input-group-text" for="type">Geometry type:</label>
+                <select class="form-select" id="type" name="type">
+                    <option value="Point">Point</option>
+                    <option value="LineString">LineString</option>
+                    <option value="Polygon">Polygon</option>
+              </select>
+            </span>
         </div>
 
         <div id="info-table">
