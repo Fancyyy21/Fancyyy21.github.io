@@ -22,12 +22,23 @@ tags:
     description: Membuat akun user dengan password terenkripsi
     externalDocs:
       description: Deskripsi dan Kode Program
-      url: https://pkg.go.dev/github.com/Fancyyy21/BackendGIS #yang ini blom diganti ====================================================================
+      url: https://pkg.go.dev/github.com/Fancyyy21/BackendGIS 
   - name: Login
     description: Mendapatkan token menggunakan akun user yang telah dibuat
     externalDocs:
       description: Deskripsi dan Kode Program
-      url: https://pkg.go.dev/github.com/Fancyyy21/BackendGIS #yang ini blom diganti ====================================================================
+      url: https://pkg.go.dev/github.com/Fancyyy21/BackendGIS 
+  - name: Geojson
+    description: Tugas GeoJson
+    externalDocs: 
+      description: 
+      url: 
+  - name: GIS 9
+    description: Tugas GIS 9
+    externalDocs:
+      description: Deskripsi dan Kode Program
+      url: https://pkg.go.dev/github.com/Fancyyy21/FancyBackendGISBaru 
+  
 paths:
   /signup-1fancy:
     post:
