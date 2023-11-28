@@ -165,8 +165,69 @@ paths:
         - token:
             - write:apiKey
             - read:apiKey
+  /Fancy-PostGeoIntersects:
+    post:
+      tags:
+        - GIS 9
+      summary: MembuatPostGeoIntersects
+      description: MembuatPostGeoIntersects
+      operationId: MembuatPostGeoIntersects
+      requestBody:
+        content:
+          application/json:
+           schema:
+              $ref: '#/components/schemas/GeoIntersects'
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GeoIntersects'
+      security:
+        - token:
+            - write:apiKey
+            - read:apiKey
+  /Fancy-PostGeoWithin:
+    post:
+      tags:
+        - GIS 9
+      summary: MembuatPostGeoWithin
+      description: MembuatPostGeoWithin
+      operationId: MembuatPostGeoWithin
+      requestBody:
+        content:
+          application/json:
+           schema:
+              $ref: '#/components/schemas/GeoWithin'
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GeoWithin'
+      security:
+        - token:
+            - write:apiKey
+            - read:apiKey
 components:
   schemas:
+    GeoIntersects:
+      type: object
+      properties:
+        longitude:
+          type: int
+          example: 108.22501803948785
+        latitude:
+          type: int
+          example: -6.835460702759789
+    GeoWithin:
+      type: object
+      properties:
+        coordinates: 
+              type: array
+              example: [[[108.22438461893586, -6.835763418280848],[108.22436602117318, -6.836014967898478],[108.22447199332822, -6.836028555754737],[108.22449199469526, -6.835767599161727],[108.22438461893586, -6.835763418280848]]]
     Geojson:
       type: object
       properties:
